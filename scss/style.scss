@@ -23,64 +23,47 @@ a {
   text-decoration: none;
 }
 
-.hero {
-  @include set-bg($primary-color);
-  height: 600px;
+.hero { //set background color using mixin
+   @include set-bg($primary-color);  
+  height: 500px; // Set height of hero section
 
   nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; // Use flexbox for layout
+    align-items: center; // Align items vertically
+    justify-content: space-between; // Space elements evenly
 
     ul {
-      display: flex;
-      list-style-type: none;
+      display: flex; // Use flexbox for layout
+      list-style-type: none; // Remove bullet points from list
     }
 
     li {
-      padding: 15px;
+      padding: 13px; // Add padding around list items
     }
 
     a {
-      color: text-color-picker($primary-color);
+      color: text-color-picker($primary-color); // Set text color using a function
     }
 
     a:hover {
-      color: $secondary-color;
+      color: $secondary-color; // Change text color on hover
     }
   }
 
   &-content {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
+    height: 100%; // Fill the height of the hero section
+    display: flex; // Use flexbox for layout
+    align-items: center; // Align items vertically
+    justify-content: center; // Center items horizontally
+    margin-top: 30px; // Add space above the content
 
     img {
-      width: 50%;
+      width: 50%; // Set width of image to 50%
     }
 
     h1 {
-      font-size: 50px;
-      line-height: 1.2;
+      font-size: 50px; // Set font size of heading
+      line-height: 1.2; // Set line height of heading
     }
-  }
-}
-$spaceamounts: (1,2,3,4,5);
-
-@each $space in $spaceamounts {
-  .m-#{$space} {
-    margin: #{$space}rem;
-  }
-  .my-#{$space} {
-    margin: #{$space}rem 0;
-  }
-
-  .p-#{$space} {
-    padding: #{$space}rem;
-  }
-  .py-#{$space} {
-    padding: #{$space}rem 0;
   }
 }
