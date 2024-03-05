@@ -24,7 +24,7 @@ a {
 }
 
 .hero { //set background color using mixin
-   @include set-bg($primary-color);  
+   @include set-bg($primary-color);   //is using a mixin called set-bg to apply a background color to the element with the class .hero.
   height: 500px; // Set height of hero section
 
   nav {
@@ -50,12 +50,12 @@ a {
     }
   }
 
-  &-content {
+  &-content { // &-content is used to create a new class .hero-content that is a child of .hero
     height: 100%; // Fill the height of the hero section
     display: flex; // Use flexbox for layout
     align-items: center; // Align items vertically
     justify-content: center; // Center items horizontally
-    margin-top: 30opx; // Add space above the content
+    margin-top: 30px; // Add space above the content
 
     img {
       width: 45%; // Set width of image to 50%
